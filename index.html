@@ -1,18 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset='utf-8'>
-	<meta name='viewport' content='width=device-width,initial-scale=1'>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>instagram</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" 
+    integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-	<title>Svelte app</title>
-
-	<link rel='icon' type='image/png' href='/favicon.png'>
-	<link rel='stylesheet' href='/global.css'>
-	<link rel='stylesheet' href='/build/bundle.css'>
-
-	<script defer src='/build/bundle.js'></script>
-</head>
-
+    </head>
 <body>
+
+    <section class="profile_area">
+        <div class="container">
+            <div class="profile">
+                <div class="profile_image">
+                    <img src="https://lh3.googleusercontent.com/a-/AOh14GgRCS78IGXaM-fRSlLr7EHsBoeVHoSL8v3E9rkfqg=s360-p-rw-no" alt width="200px">
+                </div>
+                
+                <div class="profile_info">
+                    <div class="profile_info--top">
+                        <h1>REZERO</h1>
+                        <a href="#" class="edit">แก้ใขโปรไฟล์</a>
+                        <a href="#" class="gear"><i class="fas fa-cog"></i></a>
+                    </div>
+                    <div class="profile_info--center">
+                        <span><strong>21</strong>โพสต์</span>
+                        <span>ผู้ติดตาม<strong>3</strong>คน</span>
+                        <span>กำลังติดตาม<strong>63</strong>คน</span>
+                    </div>
+                    <div class="profile_info--bottom">
+                        <strong>Fuse</strong>
+                        <br>
+                        <p>นักเรียนโรงเรียนไตรพัฒน์ <a href="http://www.tripatschool.ac.th/">Tripat School.ac.th</a> | Tel.0832637000</p>
+                        <p>Phumrapee Petcharat</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="tabs_area">
+        <div class="container">
+
+            <div class="tabs">
+                <div onclick="switchTab(event, 'tb_1')" class="tab-item active"><i class="fas fa-th"></i> <strong>โพสต์</strong></div>
+                <div onclick="switchTab(event, 'tb_2')" class="tab-item"><i class="fas fa-tv"></i> <strong> IGTV</strong></div>
+                <div onclick="switchTab(event, 'tb_3')" class="tab-item"><i class="far fa-bookmark"></i> <strong> บันทึกใว้</strong></div>
+                <div onclick="switchTab(event, 'tb_4')" class="tab-item"><i class="fas fa-user-tag"></i> <strong> มีผู้แท็ก</strong></div>
+            </div>
+
+            <div class="tabs_content">
+                <div id="tb_1" class="tabs_content--item">
+                    <div class="gallery_grid">
+                        
+                        <div class="grid-img">
+                            <div class="grid-img-icon">
+                                <span><i class="fas fa-heart"></i> 172</span>
+                                <span><i class="fas fa-comment"></i> 2</span>
+                            </div>
+                            <img src="https://lh3.googleusercontent.com/a-/AOh14GiJrJ-fDG8PKpWyKDa5Xq7eDf7IEHdD980XxgTDDw=s360-p-rw-no" alt="">
+                        </div>
+
+                        <div class="grid-img">
+                            <div class="grid-img-icon">
+                                <span><i class="fas fa-heart"></i> 172</span>
+                                <span><i class="fas fa-comment"></i> 2</span>
+                            </div>
+                            <img src="https://lh3.google.com/p/AF1QipPozDHCt59wI_n8Nm0wIBxC9v_p5M58np6z92pc=s1585-nu-U" alt="">
+                        </div>
+
+                        <div class="grid-img">
+                            <div class="grid-img-icon">
+                                <span><i class="fas fa-heart"></i> 172</span>
+                                <span><i class="fas fa-comment"></i> 2</span>
+                            </div>
+                            <img src="https://lh3.googleusercontent.com/0_M7zmkxorAH7mUaOd6mCGX7Df_lJ5vdL1xwNFgT2Ii5IDwyZPQ2e2vr-j608lRFRdHXOgH5Pq8EPqbg-7vM6E5VfERCXLxmUr9YT2kt-Rfa45oUL9yH309M-_ij8IavNuesR53MfTx7qDslTX0d0BAW16uhf31pC-dfpF51d5rVM01FmdoaBFzZ2bTTGrblmxU2ugefC4F4cIxV7pjfdSHS7ykUri_Kr0wxQ48YV__MctAB4Rgp2dnOT0wmyydH9FxMqw571vSigPJj_yEu5qqheWREyCdNvwyQEL6XGbOYStXatnmp5CNoO8rCEmPoiuCgZKj9_CS0NM7pbh9Orz3Uls6cmLiJfOWXSZPuz14KjTtQiLkOIxQkQaLk4MN1d3gXs7S6FRKfkUjmO_SsG7HKxYbhhgmNJeKZTo2abWSsXdGnoBv9-lGOooTwhGyZfBgzZZ5VLnloi3JG8oEn7AolBoJ_FkGkz1CKJrKV5Z93RqcNQbSO1mUEjqHBpgOZiFQvNiRnzy6AV55b9MoODIpEKZxB4onPJf1OYhI_ABexUWvgq7EsqffC_Cw8i5O7NtVjp1hMJhNkVVqkomI0y5EDYUEYvdM8234vQlXoK9sxekZU3kAimendaSV2URuiG5RVZiZ-gG41LydtBhPaZXnlu5RpVmsryGQORA9BVODBpBgY2PZnEp-tQ-MGddUIZKWTYCfbHIU3SLaNh7OG7uMA=w678-h903-no?authuser=0" alt="">
+                        </div>
+
+                        <div class="grid-img">
+                            <div class="grid-img-icon">
+                                <span><i class="fas fa-heart"></i> 172</span>
+                                <span><i class="fas fa-comment"></i> 2</span>
+                            </div>
+                            <img src="https://lh3.googleusercontent.com/fyklJMfPwDw5QzJZS1nzAw3apKOKW0gvhX0IWkGH3I-l2fcahDUrUKAFaID4gYWOseNmGjrd8WAdkep0hczROhq6n4Q_bLx8KMjd5TcUwufSXrjcDL6isZ6_lhZ2oeIoBaJ8VXVLQPmwNske7eBID3-kLjJwgkOuKECb2b3BHyRbbusOWMY4t2sZfW00U_nKy18JlhL-85LKzk9kUlSOazus96D-OHyOsES43hZpAdPwjpklZ8CfCMpjVsf-Cl8uxUcJe1JXDj25a61-65MjaCbokvEfw1YJwkZzFh1ssAvYzJftnzjz5KOHldc1zqxiUfi6gZ4Wa4ivxYTfJ_-D6XOkZPQ77BtfcNRQYC-q0O_NuHYhUKPyk3R519TWSe5Xl8TcSkE2YOGUUBMUs0ZK0_HP6v985TFye1SkI5xsyO55zIS-rep5hPDSmam7JbCSXive2zENfPmnOwgD1vYEzxTLyaguzG6dq9eDF0SwbjChuM_edTiNqZwxX7Xn-ChkY-Q2nqOYnKlGsF_ms-axDhukNpIi1wwBWfTrYpXShg67ierwF2qwA2SQgXx4uD7awAwZOxERCG8axjmNW7fYp0O8af88zTGVYk7dZMmXqPv_3zGhLSfgum_4aA0xXgRgscMB_LTt9hX0SUNN4_WqSbEd_nxEVjVCXu6EMJAFAKTl7MgrLCFJKmQpi9z8_tif03F6x2FDwWEy2y5UFIHvRyfI=s903-no?authuser=0" alt="">
+                        </div>
+
+                        <div class="grid-img">
+                            <div class="grid-img-icon">
+                                <span><i class="fas fa-heart"></i> 172</span>
+                                <span><i class="fas fa-comment"></i> 2</span>
+                            </div>
+                            <img src="https://lh3.googleusercontent.com/BWD0o9xmLxw_ixG7utd_CKRP_h4h4lAaic60ZF82pC2tdGancztv6OXo69Vshvp2Fbnqu02Dm8BjcgUw_C9-omOqQhVcKuuCVXsdOgsK3S528p4sX5rkVHFDt87OQTNNxhjPhH-50n3e9ZUqUQiKfi-TAoBsednwXFS8XXyyhIjy0T_sr-IF_4fzerEM7J5Y5Rtj73jpvnFLh4Es-EMOr-E502yAM2_TFTiQAnOLAg9Ni3lNpiDge67TeU7JZlzaQyGgSDD069wCdVyihnbKRkCJPPdvlZTh98PsXM1Cp8M0MXsJOgPryXI9oKOy2SZKfokR-zE6Ou6_hb5dDk1xZewuTDT22TQjKp02-VhxMSD9sDmwrzDsTXHufWroZhPc66Z_wmZ8f_Xf7o60eBuHi_KXe3T2Nwfx_UucphgZi7hRKQU6dy2xp_WywqSzQS4XPtyFYEzJPhJUp75UUENC_zZjObO8o3xtNys3jbIrZOo9S7q9WilNpDWSJV4r7SFtcWJ-7VJQFJ0L6IEyXSFj182JeN0NyDi5G24h10NTi-MbRpbU3c_A9PLKnDG_9TmffMeYTbIsIuWJGRgUucHxp-U2DFC36cB7mc20x873fjCZlesnz-Ziu2TCIbjzSJ4tYbXbqVfxMWeGodwo2KTXVSo9RqxoB-87ZXqktKyjO2a_Pc7kr4rTJ7wqGvWX-se42vyZ_NLPAr_6UsVkHyIc8sgl=s903-no?authuser=0" alt="">
+                        </div>
+
+                        <div class="grid-img">
+                            <div class="grid-img-icon">
+                                <span><i class="fas fa-heart"></i> 172</span>
+                                <span><i class="fas fa-comment"></i> 2</span>
+                            </div>
+                            <img src="https://lh3.googleusercontent.com/B0Kmb9WL8kwqg2mvuQfMq4_imsgRUbYAe6wu5_bEJFod4stSogAeNdIozJjxBdAl9KRANy7qUABAq5d0Jn7Ax5d847kCSyxxwiguEX0WL9bYuNaZgB4BLY6yMbW-Ns-jJVAGbEY2qPbqz0ipkrWngk1Oj1AuCPteb3Y2dhsxSfjGSJ7v8vsaHBlC4Basj5od4ui71epyqzvw20a3T8tyRS5K4_o_k2hMBanKJoxgpuabdwUu1NKkWlmf8bZeH8sD3CuaDj_s9qEH-Y6dQY6v4z7IepBT2QnPZlM2WEpJd-S3gW12TBW-Exh0WZ4t0WRsNpBZPJ-puIAI9fAbXw4QOeh2hBaGZ3iHOC6YpMXdVXYpfjpeYkNsKrPjwev68bP4usMriKmxJUiEEGjlin_ubP7Hs33lbootmjy3-EEQaODez9z5DGUYy7V-5iWLUYJNLi-W85duFJ0qqQxEcmjn7aGIGcQZ7BZ1Dl7nxyq79SdR37jxf7uq31nERQgNgNoZqHzzeNhLhY52E49KHI2C2lyvL0ZZMXKwXuHZFtGFNxT5pE4b6vqau37WNT-zghIsH1VENQzTEk3eg0dEhQalO1PZ3I9009XEhrbxDvLG2Xmgo_oGjytE0MkqIzlR3UCZRnfINyCXqlfZ5ULUVD4FSqrvIpssyt-tFwDG-s8JCqrC1ycxpacXgOgPOuqAAyspadK9BPoKdwzCxTgv1OR8Szhe=s340-no?authuser=0" alt="">
+                        </div>
+
+                        <div class="grid-img">
+                            <div class="grid-img-icon">
+                                <span><i class="fas fa-heart"></i> 172</span>
+                                <span><i class="fas fa-comment"></i> 2</span>
+                            </div>
+                            <img src="https://lh3.googleusercontent.com/WTwt5xWOJYzvWqrrbw3P2TaKfLSE6q-3utbba3TLSPHKZLymfAcYLEuebWXMb4albRacPzBoDq1lURfMYNzYCV7mUN3anVOqKxBFUp5Q6rwMeKY5-UejEyuRhXGRZnzy3jG07BiBdzMTlYrzKsOi0mD_qRlWh58mb16Dwmvw8d8bojw6ROxypvjg8nHioIckQjFBOeFIUZRzRwqAkBpDS5yHWh3zzjnIEMJN78JOWMolbpG_BO5-VZpp0i4rav9Eo28V54gaEAQ_1CJysmGpA1qrLHohT5OXn0EzpH-XiyCtY_O6CVpRugJ2hqcM6Lw4Te-ivMaNDSafwNMbCqDJ7jMDGgEDYLfDDpCJ180Hi-jjFACA_u8eS_8WLq0e5vaE-oOlaadahI2kplVWqEjJMjkCGCErhem9IZr80vVrNw5dXKEdERYPNV17a6wpkYDGYO-FD6be0zGD2vU_KPUjeNzqyy4tmchHtg-lZwsVaVnipOm3L_HHBIH3HWguyGja8E4dPqH9R6iWIgi2apps0ZCzzwHDm2kT7KDSj-47JgiONzr7RRNzjnq_3RZuNQKCsMwkmCtBb0IFXowrPrIXma78RtEjhynI5wIZRy7PFxd226vRBvCZza6Fxte2VNruUC77VwNfaqhxTWoAdccW0GANcqX78E6LLnW9E-2O-wjRn4DAkFc28BD-IQh-QTIrDE1tvzRdGz2GcmPGhDC2sS4f=s903-no?authuser=0" alt="">
+                        </div>
+
+                        <div class="grid-img">
+                            <div class="grid-img-icon">
+                                <span><i class="fas fa-heart"></i> 172</span>
+                                <span><i class="fas fa-comment"></i> 2</span>
+                            </div>
+                            <img src="https://images.unsplash.com/photo-1515705576963-95cad62945b6?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80" alt="">
+                        </div>
+
+                        <div class="grid-img">
+                            <div class="grid-img-icon">
+                                <span><i class="fas fa-heart"></i> 172</span>
+                                <span><i class="fas fa-comment"></i> 2</span>
+                            </div>
+                            <img src="https://images.unsplash.com/photo-1515705576963-95cad62945b6?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <div id="tb_2" class="tabs_content--item tb_2">
+                    <i class="fas fa-tv"></i>
+                    <h1>เริ่มแชร์ไปยัง IGTV</h1>
+                    <p>สร้างห้องของคุณเองเพื่อเริ่มเเชร์วีดีโอแบบยาวในแนวตั้งกับ <br> กลุ่มเป้าหมายบน Instagram</p>
+                    <a href="#" class="tb_2_btn">เริ่มต้นใช้งาน</a>
+                </div>
+
+
+                <div id="tb_3" class="tabs_content--item tb_3">
+                    เฉพาะคุณเท่านั้นี่สามารถเข้าดูสิ่งที่คุณบันทึกไว้ได้
+
+                    <div id="tb_4" class="tabs_content--item tb_4">
+                        มีผู้แท็ก
+
+                    </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="script.js"></script>
 </body>
 </html>
